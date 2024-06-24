@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Competition Results</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate Competition Results</h1>
+        
+        <div id="settings">
+            <h2>Scoring Settings</h2>
+            <label>Points per Kill: </label><input type="number" id="killPoint" value="5">
+            <br>
+            <div id="placementSettings"></div>
+            <button type="button" onclick="addPlacement()">Add Placement Point</button>
+        </div>
+
+        <form id="resultsForm">
+            <div id="teams">
+                <h2>Team Information</h2>
+            </div>
+            <button type="button" onclick="addTeam()">Add Team</button>
+            <button type="submit">Calculate Results</button>
+        </form>
+
+        <div class="results-section">
+            <h2>Results:</h2>
+            <div id="resultsBox">
+                <ul id="resultsList"></ul>
+            </div>
+            <div class="results-actions">
+                <button type="button" onclick="copyResults()">Copy Results</button>
+                <button type="button" onclick="downloadResults()">Download as TXT</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Made with ❤️ by Mich
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
