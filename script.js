@@ -106,7 +106,7 @@ function generateImage() {
         const img = canvas.toDataURL('image/png');
         const a = document.createElement('a');
         a.href = img;
-        a.download = 'competition_results.png';
+        a.download = 'mich_results.png';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
