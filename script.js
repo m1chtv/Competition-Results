@@ -88,7 +88,6 @@ document.getElementById('resultsForm').addEventListener('submit', function(e) {
 
     teams.sort((a, b) => b.score - a.score);
 
-    // Display results
     const resultsList = document.getElementById('resultsList');
     resultsList.innerHTML = '';
     teams.forEach(team => {
@@ -97,3 +96,19 @@ document.getElementById('resultsForm').addEventListener('submit', function(e) {
         resultsList.appendChild(li);
     });
 });
+
+function generateImage() {
+    const resultsBox = document.getElementById('resultsBox');
+    html2canvas(resultsBox).then(canvas => {
+        // const imageResult = document.getElementById('imageResult');
+        // imageResult.innerHTML = '';
+        // imageResult.appendChild(canvas);
+        const img = canvas.toDataURL('image/png');
+        const a = document.createElement('a');
+        a.href = img;
+        a.download = 'competition_results.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+}
