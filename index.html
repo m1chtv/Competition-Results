@@ -33,7 +33,9 @@
             <div class="results-actions">
                 <button type="button" onclick="copyResults()">Copy Results</button>
                 <button type="button" onclick="downloadResults()">Download as TXT</button>
+                <button type="button" onclick="generateImage()">Generate Image</button>
             </div>
+            <!-- <div id="imageResult"></div> -->
         </div>
 
         <footer class="footer">
@@ -41,6 +43,7 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
