@@ -93,7 +93,7 @@ document.getElementById('resultsForm').addEventListener('submit', function(e) {
     resultsList.innerHTML = '';
     teams.forEach(team => {
         const li = document.createElement('li');
-        li.textContent = `${team.name}: ${team.score} points`;
+        li.textContent = `${team.name}: ${team.kills} kills  ${team.score} points`;
         resultsList.appendChild(li);
     });
 });
